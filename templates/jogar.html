@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+
+Murilo: {{mJogador}} Pontos: {{pJogador}}
+</br>
+Máquina: {{mPC[0]}}
+</br>
+
+<form method="POST">
+
+  <button type="submit" class="btn btn-primary">Comprar</button>
+  <a href="{{ url_for('resultado') }}" class="btn btn-info" role="button">Finalizar</a> 
+</form>
+{% endblock %}
