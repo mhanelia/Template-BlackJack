@@ -1,14 +1,31 @@
 {% extends "layout.html" %}
 {% block content %}
 
-Murilo: {{mJogador}} Pontos: {{pJogador}}
-</br>
+
+Murilo:
+{% for result in mJogador %}
+{% for item in result %}
+<script>
+$("#cartas").attr("src", "static/img/cards/"+{{item}}+".png");
+</script>
+
+<td><img id="cartas" src="static/img/cards/" height="200" width="100"></td>
+
+  {% endfor %}
+  {% endfor %}
+
+
+</br></br></br></br>
 Máquina: {{mPC[0]}}
 </br>
+
 
 <form method="POST">
 
   <button type="submit" class="btn btn-primary">Comprar</button>
-  <a href="{{ url_for('resultado') }}" class="btn btn-info" role="button">Finalizar</a> 
+  <a href="{{ url_for('resultado') }}" class="btn btn-info" role="button">Finalizar</a>
 </form>
+
+aippe1234
+
 {% endblock %}
