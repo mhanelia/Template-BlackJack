@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<h5>
+Black Jack!!</br></h5>
+
+Um jogador contra a banca (o computador).</br>
+
+1. Quem ganha ?</br>
+
+Quem tiver a maior pontuação sem estourar 21 pontos</br>
+
+2. Quanto vale cada carta ?</br>
+
+ -> Ás vale 1 ponto;</br>
+ -> Cartas de números valem a mesma quantidade do número;</br>
+ -> Cartas de figuras (K, J, Q) valem 10.</br>
+
+3. Regras:</br>
+
+3.1. Tanto o jogador quando a banca recebem 2 cartas, porém a banca exibe somente uma carta, desta forma não é possível saber a soma dos pontos da banca, é uma aposta cega.
+</br>
+3.2. A compra (chamada de Hit), o jogador poderá (compra se quiser) comprar cartas enquanto sua pontuação for menor igual à 16. Quando terminar suas compras, será a vez da banca com a mesma regra.
+</br>
+3.3. Após as compras concluídas, será a hora de virar as cartas (a aposta é chamada de Bet), neste momento as cartas e pontuações da banca e do jogador são exibidas, e computado o vencedor.
+</br>
+
+{% endblock %}

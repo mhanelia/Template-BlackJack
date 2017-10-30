@@ -1,27 +1,28 @@
 {% extends "layout.html" %}
 {% block content %}
 
-
 Murilo:
 {% for result in mJogador %}
 {% for item in result %}
-<script>
 
-$({{item}}).attr("src", "static\img\cards\3♣.png");
-
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#{{item}}").attr("src", "static/img/cards/{{item}}.png");
+  $("#{{mPC[0]}}").attr("src", "static/img/cards/{{mPC[0]}}.png");
+ });
 </script>
 
-
-<td><img id={{item}}  src="" height="200" width="100"></td>
+<td><img id={{item}} src="" height="200" width="100"></td>
 
   {% endfor %}
   {% endfor %}
 
 
 </br></br></br></br>
-Máquina: {{mPC[0]}}
-</br>
+Máquina:
+<td><img id={{mPC[0]}} src="" height="200" width="100"></td>
 
+</br>
 
 <form method="POST">
 
