@@ -23,6 +23,12 @@ class BlackJack(object):
               deck.append(i+x)
       return deck
 
+    def new_game(self, mao):
+        self.deck = []
+        mao = []
+        random.shuffle(self.deck)
+        return mao
+
     def shuffle(self):
         random.shuffle(self.deck)
 

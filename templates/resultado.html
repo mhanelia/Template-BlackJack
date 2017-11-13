@@ -3,5 +3,30 @@
 
 RESULTADO:
 {{resultado}}
+</br></br></br></br>
+Murilo:
+{% for result in mJogador %}
+{% for item in result %}
 
+<td><img id={{item}} src="static/img/cards/{{item}}.png" height="200" width="125"></td>
+
+  {% endfor %}
+  {% endfor %}
+
+
+
+</br></br></br></br>
+
+Máquina:
+{% for result in mPC %}
+{% for item in result %}
+
+<td><img id={{item}} src="static/img/cards/{{item}}.png" height="200" width="125"></td>
+
+
+
+{% endfor %}
+{% endfor %}
+<br><br>
+<a href="/new_game" class="btn btn-info">Jogar novamente</a>
 {% endblock %}
